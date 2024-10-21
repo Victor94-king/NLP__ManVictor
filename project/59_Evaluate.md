@@ -2,7 +2,6 @@
 
 **本人项目地址大全：[Victor94-king/NLP__ManVictor: CSDN of ManVictor](https://github.com/Victor94-king/NLP__ManVictor)**
 
-
 <br />
 
 ***写在前面: 笔者更新不易，希望走过路过点个关注和赞，笔芯!!!***
@@ -16,19 +15,14 @@
 <br />
 
 <br />
-
-
 
 ## **1. 概述**
 
 在当今快速发展的自然语言处理领域，大型语言模型（LLM）正发挥着越来越重要的作用。从自动翻译到文本生成，这些模型在许多应用场景中表现出了惊人的能力。然而，要确保这些模型能够在实际应用中表现稳定且高效，必须对其进行严谨的评估。这篇文章将详细探讨LLM评估指标的定义、方法和最佳实践，并提供相应的代码示例，帮助您构建强大的LLM评估流程。
 
-
 <br />
 
-
 <br />
-
 
 ## **2. LLM评估指标的定义与重要性**
 
@@ -40,15 +34,11 @@ LLM评估指标是用来量化和评估大型语言模型（LLM）输出质量�
 
 尽管LLM评估对于优化模型至关重要，但这一过程常常面临挑战。首先，LLM的输出可能具有高度的多样性和不确定性，使得评估变得复杂。此外，如何选择和实施合适的评估指标，以准确反映模型的实际性能，也是一大难题。因此，开发一个全面且有效的LLM评估框架是构建成功LLM应用的关键。
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ## **3. LLM评估指标的主要类别**
 
@@ -164,15 +154,11 @@ completeness_score = evaluate_summary_completeness(summary, original_text)
 print(f"Summary Completeness Score: {completeness_score}")
 ```
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ## **4. LLM评估方法的比较**
 
@@ -212,12 +198,9 @@ LLM作为评审员是使用LLM本身来评估其输出的一种方法，例如G-
 
 LLM评审员可以充分考虑LLM输出的完整语义，提高评估的准确性。但由于评估过程的主观性和模型的随机性，评估结果可能不稳定。此外，LLM评审员需要较高的计算资源和模型接口支持。
 
-
 <br />
 
-
 <br />
-
 
 ## **5. 如何实施和确定最佳LLM评估指标集**
 
@@ -243,15 +226,11 @@ LLM评审员可以充分考虑LLM输出的完整语义，提高评估的准确�
 * **分析结果** ：对评估结果进行分析，以识别模型的优点和不足之处。
 * **迭代改进** ：根据评估结果调整和改进模型，重复评估过程以确保持续优化。
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ## **6. RAG指标与微调指标**
 
@@ -260,6 +239,8 @@ LLM评审员可以充分考虑LLM输出的完整语义，提高评估的准确�
 RAG作为一种方法，通过补充额外的上下文来增强LLM，生成定制化的输出，非常适合构建聊天机器人。它由两个组件组成——检索器和生成器。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/VtGaZVqpDn2gVY2bFoFfHmwacUbw0uFQDWePTic7yKDREbthI40NGdLAsYfrkk9GYianibJCUKEjU8yRaNLMRQ7hA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+
 
 【典型的RAG架构 】
 
@@ -483,12 +464,9 @@ print(metric.score)
 
 一个可能的解决方案是为评估微调定制LLM或提供非常清晰的指导方针进行上下文学习，因此我认为偏见是所有指标中最难实施的。
 
-
 <br />
 
-
 <br />
-
 
 ## ****7. 特定用例指标****
 
@@ -526,7 +504,6 @@ metric = SummarizationMetric(threshold=0.5)
 metric.measure(test_case)
 print(metric.score)
 ```
-
 
 ## **8. 结语**
 

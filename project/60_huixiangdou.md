@@ -1,4 +1,4 @@
-# 自然语言处理:第五十九章 LLM评估终极指南
+# 自然语言处理:第六十章 text2vec 如何选择 chunksize 和 splitter？
 
 **本人项目地址大全：[Victor94-king/NLP__ManVictor: CSDN of ManVictor](https://github.com/Victor94-king/NLP__ManVictor)**
 
@@ -59,6 +59,14 @@
 
 因此 text2vec 调参目标是： **分词后的长度和模型输入对齐** 。
 
+
+
+<br />
+
+
+<br />
+
+
 ## **测试数据**
 
 HuixiangDou（豆哥）是运行在群聊场景中的领域知识助手。
@@ -75,6 +83,15 @@ HuixiangDou（豆哥）是运行在群聊场景中的领域知识助手。
 本文的 query 来自 OpenMMLab 用户群和 ncnn 开发者群，累计 2302 条问题。通过人工标注，判定问题与知识库是否相关。
 
 测试脚本和数据已开源到 GitHub。
+
+
+
+<br />
+
+
+<br />
+
+
 
 ## **测试结果**
 
@@ -131,6 +148,14 @@ HuixiangDou（豆哥）是运行在群聊场景中的领域知识助手。
 前面验证右值时，已给出 HuixiangDou 在 BCE 和 BGE [5] 上的精度结果（75.39 vs 72.23）。本文并未观察到二者在结构上有显著差异，考虑到 BGE 模型更大，因此推测 BCE 的训练数据和豆哥更匹配。
 
 由于 BGE 提供了完整的复现过程、论文和源码，对于注重数据隐私的业务，BGE 更适合微调和难例挖掘。
+
+
+
+<br />
+
+
+<br />
+
 
 ## **总结**
 
