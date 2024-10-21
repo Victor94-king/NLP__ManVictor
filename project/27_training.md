@@ -68,15 +68,11 @@ training_arguments = TrainingArguments(
 
 实验表明，即使在批量大小为32的情况下，也能获得较好的损失结果。但是，这会增加内存的使用量，在一些情况下，如16GB内存的GPU上，如果不采用如梯度累积等技术，实现这样的批量大小是不现实的。因此，而不是单纯追求更大的批量，应综合考虑硬件限制并通过实验确定最佳的批量大小。这种方法保证了在可用资源范围内，模型训练既高效又实用。
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ## 二、最大Sequence Length、Padding、Truncating
 
@@ -156,15 +152,11 @@ print(input)
 
 理想情况下，**最大长度应设为与训练样例中最长序列的长度相匹配。**如果GPU内存有限，这个长度也可以适当减少。通常，除了用于RAG应用和摘要任务外，超过4,096的最大长度并不常见；对于大多数的语言生成任务，最小推荐长度是512。这样的设定有助于在确保模型效能的同时，避免不必要的内存消耗。
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ## 三、Epochs和Steps
 
@@ -194,17 +186,11 @@ print(input)
 
 即使没有观察验证损失，也可以注意到训练损失下降得异常迅速。如在下一节中所述，通过调整学习率和采用适当的预热比例，可以有效地解决这一问题。这种调整有助于模型学习得更为平稳，避免过拟合，同时保证模型在未知数据上的泛化能力。
 
-
-
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ## 四、梯度累积步骤Gradient Accumulation Steps
 
@@ -221,14 +207,9 @@ print(input)
 [...]
 ```
 
-
-
-
 <br />
 
-
 <br />
-
 
 ## 五、梯度检查点Gradient Checkpointing
 
@@ -250,16 +231,11 @@ print(input)
 model.gradient_checkpointing_enable()
 ```
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
-
 
 ## 六、学习率Learning Rate
 
@@ -277,14 +253,9 @@ model.gradient_checkpointing_enable()
 [...]
 ```
 
-
 <br />
 
-
 <br />
-
-
-
 
 ## 七、学习率调度器Learning Rate Scheduler
 
@@ -302,13 +273,9 @@ model.gradient_checkpointing_enable()
 [...]
 ```
 
-
-
 <br />
 
-
 <br />
-
 
 ## 八、热身步骤和热身比率Warmup Steps and Warmup Ratio
 
@@ -326,13 +293,9 @@ model.gradient_checkpointing_enable()
 [...]
 ```
 
-
-
 <br />
 
-
 <br />
-
 
 ## 九、权重衰减Weight Decay
 
@@ -350,12 +313,9 @@ model.gradient_checkpointing_enable()
 [...]
 ```
 
-
 <br />
 
-
 <br />
-
 
 ## 十、优化器Optimizer
 
@@ -379,13 +339,9 @@ AdaFactor是为了减少内存使用和提升训练效率而设计的另一优�
 
 为了获得更好的模型，我建议将其设置为未量化的“adamw_torch”。如果内存不足，请尝试“adamw_8bit”。然后，作为最后的手段，尝试“paged_adamw_8bit”。它会比 AdamW 8 位慢，但会进一步减少内存消耗。
 
-
-
 <br />
 
-
 <br />
-
 
 ## 十一、Float16 和 Bfloat16
 
@@ -403,13 +359,9 @@ float16和bfloat16之间的主要差异在于它们如何在指数和小数部�
 [...]
 ```
 
-
-
 <br />
 
-
 <br />
-
 
 ## 十二、评估和保存步骤Evaluation and save steps
 

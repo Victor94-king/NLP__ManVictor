@@ -1,7 +1,6 @@
 # 自然语言处理:第五十二章 LongCite：助力RAG应用，让大模型精准找到引用
 
-
-**代码：** https://github.com/THUDM/LongCite\
+**代码：** [THUDM/LongCite: LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-context QA](https://github.com/THUDM/LongCite/)
 
 **数据：**
 
@@ -18,7 +17,6 @@
  **论文：** https://arxiv.org/abs/2409.02897
 
  **视频：** https://www.bilibili.com/video/BV1QD4zexEU2/
-
 
 <br />
 
@@ -49,8 +47,6 @@
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/Eu2cI2IojBIj6kDXFP9tRxhsHq6TNVE7d29U77NIia5Lb4wfv7DRqkrv44WjFYz9uGibM3ZWAy7ANGeOogrr2pUA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 可以看到，训练的模型 LongCite 无论在引用质量，还是回复正确性都处于较高水平。
-
-
 
 # **一、能力评测：LongBench-Cite**
 
