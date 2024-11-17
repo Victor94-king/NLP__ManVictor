@@ -1,4 +1,4 @@
-# 自然语言处理:第六十一章 微调Embedding模型，将你的RAG上下文召回率提高95%
+# 自然语言处理:第六十二章 KAG 超越GraphRAG的图谱框架
 
 **本人项目地址大全：[Victor94-king/NLP__ManVictor: CSDN of ManVictor](https://github.com/Victor94-king/NLP__ManVictor)**
 
@@ -18,7 +18,6 @@
 
 <br />
 
-
 **KAG（ **Knowledge Augmented Generation** ）框架**早在9月份就已经发布，近期终于开源了，它的核心在于提出了：
 
 * *一种LLM友好的知识表示方法*
@@ -28,31 +27,23 @@
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/AE74ia62XricF2OABM4cqP8OZkeII3GnHtMw8ia2KQyN1kGGuic4PWRd4kpmtyOR4xibeVj7ibSKTC6b1fnictyIhEkIw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-
 <br />
 
-
 <br />
-
 
 归功于在构建更有效的索引、知识对齐和混合解决库方面的创新，KAG框架在多跳问答任务中相比于现有的RAG方法有显著的性能提升，**2wiki、MuSiQue数据集上的EM指标直接翻倍。**此外，KAG框架在**蚂蚁集团的电子政务问答和电子健康**问答场景中也表现出了更高的准确性。
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/AE74ia62XricF2OABM4cqP8OZkeII3GnHtDR4L3Aic3n6IgP7ZHRCnpiaywpM6pkWJHSffrvXlNzibuI0zzOE60e57A/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-
 <br />
 
-
 <br />
-
 
 **KAG构建器流水线的示例**
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/AE74ia62XricF2OABM4cqP8OZkeII3GnHtafmu8kjuhUrk4kcj2hoegIKeyWusS7wylp5ibghicV0PDeFafjKlA0TA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 ---
-
-
 
 ## ****LLM友好的知识表示方法****
 
@@ -67,20 +58,15 @@ KAG框架提出了一个针对大型语言模型（LLMs）友好的知识表示�
 3. **属性和关系** ：对于每种类型，属性和关系包括领域专家预定义的部分、临时添加的内容以及系统内置的属性，如支持块（supporting_chunks）、描述（description）、摘要（summary）和归属（belongTo）。
 4. **层次化的知识表示** ：LLMFriSPG支持从数据到信息再到知识的层次化表示。知识层（KGcs）遵循SPG语义规范，支持在严格的模式约束下构建知识体系和定义逻辑规则。信息层（KGfr）通过信息抽取得到实体和关系等图数据。原始块层（RC）则是经过语义分割处理后的原始文档片段。
 
-
 <br />
 
-
 <br />
-
 
 **知识和信息的层次表示**
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/AE74ia62XricF2OABM4cqP8OZkeII3GnHtg6GwotQFxPToc2wjOSuIl3LIovDWDmdzVj8Tiau3tiaZMa4GvvfUbp5A/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 ---
-
-
 
 ## ****相互索引机制****
 
@@ -92,26 +78,19 @@ KAG框架介绍了一种相互索引机制，旨在构建知识结构和文本�
 4. **预定义知识结构** ：对于具有标准化结构的专业文档，如药品说明书和政务文件，可以预定义实体类型和属性，以便于信息提取和知识管理。
 5. **文本块向量与知识结构的互索引** ：KAG的互索引机制遵循LLMFriSPG的语义表示，包括共享模式、实例图、文本块和概念图等核心数据结构，以及KG存储和向量存储两种存储结构。
 
-
 <br />
 
-
 <br />
-
 
 **领域非结构化文档的KAG构建器的流程。从左到右，首先，通过信息提取获得短语和三元组，然后通过语义对齐完成消歧和融合，最后，构建的知识图谱被写入存储。**
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/AE74ia62XricF2OABM4cqP8OZkeII3GnHtswmOGZZ4liaXlJyf3hE2QGr9GsBhpzlGXhyk30c4O8cVcPU2rv0ribLg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-
 <br />
-
 
 <br />
 
 ---
-
-
 
 ## **逻辑形式引导的混合推理引擎**
 
@@ -125,15 +104,11 @@ KAG框架介绍了一个基于逻辑形式的混合推理和求解引擎，它�
 2. **逻辑形式推理** ：使用逻辑形式来表达问题，以便能够清晰地描述语义关系。这种方法可以处理涉及逻辑推理过程的问题，如“与”、“或”、“非”以及交集和差集等。
 3. **逻辑形式检索** ：在传统的RAG中，检索是通过计算问题与文档片段嵌入之间的相似度来实现的。KAG框架提出了一种结合稀疏编码器和密集检索器的方法，以提高检索的准确性。
 
-
 <br />
-
 
 <br />
 
 ---
-
-
 
 ## ****知识对齐策略****
 
@@ -147,15 +122,11 @@ KAG框架介绍了一个基于逻辑形式的混合推理和求解引擎，它�
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/AE74ia62XricF2OABM4cqP8OZkeII3GnHtArYTcBpdLH0CUqliab85v8PwMspbff4ToLsz9ibZgDJkLb3U2V4oXZpQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-
 <br />
-
 
 <br />
 
 ---
-
-
 
 ## **KAG框架核心模型**
 
