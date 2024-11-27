@@ -2,11 +2,6 @@
 
 **本人项目地址大全：[Victor94-king/NLP__ManVictor: CSDN of ManVictor](https://github.com/Victor94-king/NLP__ManVictor)**
 
-原文地址：[MinerU：精准解析PDF文档的开源解决方案](https://mp.weixin.qq.com/s/EV2_CJtwPaKinVPw2O2T-g)
-
-论文链接：[MinerU: An Open-Source Solution for Precise  Document Content Extraction](https://arxiv.org/pdf/2409.18839)
-
-git地址：**https://github.com/opendatalab/MinerU**
 
 <br />
 
@@ -148,8 +143,6 @@ Promptim 支持多种配置选项，您可以根据需求进行调整：
 - **模型选择**：选择适合您任务的模型，例如 `claude` 或 `gpt-4`。
 - **数据集大小**：根据任务的复杂性调整数据集大小。
 - **优化迭代**：控制优化循环的迭代次数。
-
-
 
 相关阅读：
 

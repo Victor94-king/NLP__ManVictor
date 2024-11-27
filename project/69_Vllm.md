@@ -18,7 +18,6 @@
 
 <br />
 
-
 VLLM和TGI一样也是大模型部署应用非常广泛的一个库，下面我以[蓝耘](https://cloud.lanyun.net/#/k8sStarter)平台为例，教学一次Vllm的使用，大家可以选择相似的云平台作为使用。
 
 * 系统: Linux
