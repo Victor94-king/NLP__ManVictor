@@ -2,8 +2,6 @@
 
 **本人项目地址大全：[Victor94-king/NLP__ManVictor: CSDN of ManVictor](https://github.com/Victor94-king/NLP__ManVictor)**
 
-原文地址: [如何从头训练大语言模型: A simple technical report - 知乎](https://zhuanlan.zhihu.com/p/906819356)
-
 <br />
 
 ***写在前面: 笔者更新不易，希望走过路过点个关注和赞，笔芯!!!***
@@ -23,19 +21,13 @@
 
 最近在帮人做长文本的QA，一个思路做问题router之后进行判断问题是全局还是局部。如果是全局的话对长文本进行summary再回答。所以这里需要对长本文进行总结，在这里看到langchain有几条处理方式
 
-
+<br />
 
 <br />
 
-
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ### 处理方式
 
@@ -266,22 +258,15 @@ print(f"执行时间: {elapsed_time:.6f} 秒")
 
 ![1732550351508](https://file+.vscode-resource.vscode-cdn.net/f%3A/NLP/graphRAG/image/main/1732550351508.png)
 
+<br />
 
 <br />
 
-
 <br />
-
-
-<br />
-
 
 ### 结果展示
 
 ![1732550409316](https://file+.vscode-resource.vscode-cdn.net/f%3A/NLP/graphRAG/image/main/1732550409316.png)
-
-
-
 
 ### 参考文档
 
