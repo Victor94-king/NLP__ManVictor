@@ -253,5 +253,3 @@ Boston is the capital city of the state of Massachusetts, located in the northea
 * 持续收集和分析失败案例
 
 通过这些持续的优化和创新，LLM的函数调用能力变得更加强大和实用，为AI应用开发带来更多可能性。关于prompt格式问题，您也可以看下我之前的文章
-
-往期推荐
